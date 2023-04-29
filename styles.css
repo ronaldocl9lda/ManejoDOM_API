@@ -1,0 +1,27 @@
+#container {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+#formulario,
+#resultados,
+#menu-comidas {
+    display: block;
+    border: 2px solid black;
+    padding: 30px;
+    margin: 30px;
+}
+
+#formulario div {
+    margin: 15px;
+}
+
+#clasificacion {
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}

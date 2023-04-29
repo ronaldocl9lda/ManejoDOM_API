@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Practicando DOM</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Formulario de Prueba</h1>
+        <form action="" id="formulario">
+            <div>
+                <label for="">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="">Fecha de Nacimiento</label>
+                <input type="date" name="date" id="fechaNacimiento" required>
+            </div>
+            <div>
+                <label for="">Género</label>
+                <input type="radio" id="masculino" name="opciones" value="masculino">
+                <label for="masculino">Masculino</label>
+        
+                <input type="radio" id="femenino" name="opciones" value="femenino">
+                <label for="femenino">Femenino</label>
+        
+                <input type="radio" id="PrefieroNoDecir" name="opciones" value="PrefieroNoDecir">
+                <label for="PrefieroNoDecir">Prefiero no decir</label>
+            </div>
+            <div>
+                <label for="">Telefono</label>
+                <input type="number" name="number" id="telefono" required>
+            </div>
+            <div class="salario">
+                <label for="">Salario</label>
+                <input type="range" name="range" id="salario" min="100000" max="999999" oninput="imprimirValorRango(this.value)">
+                <label for="" id="mostrar-salario">$0</label>
+            </div> 
+            <input type="submit" name="submit" id="submit">
+        </form>
+
+        <div id="cambiador-color">
+            <input type="color" name="color" id="color">
+            <button onclick="cambiarColor()">Cambiar Color de Fondo</button>
+        </div>
+
+        <h1>Resultados</h1>
+        <div id="resultados">
+
+        </div>
+
+        <h1>Menú de Comidas</h1>
+        <select name="clasificacion" id="clasificacion" onchange="imprimirComidas()">
+            <option value="Todos">Todos</option>
+            <option value="starters">Starters</option>
+            <option value="specialty">Specialty</option>
+            <option value="salads">Salads</option>
+        </select>
+        <div id="menu-comidas">
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</body>
+</html>
